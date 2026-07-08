@@ -1,18 +1,37 @@
 # ksql-ex1
 
-Start the server
+## 1. Start the server
+
+### docker
 
 ```bash
 docker-compose up
 ```
 
+### podman
+
+```bash
+podman compose up
+```
+
+## 2. Start the client
+
 In a separate window start the command line client.
+
+### Docker
 
 ```bash
 docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
 ```
 
-## Step 4 - Create a Stream
+### Podman
+
+```bash
+podman exec -it ksqldb-cli ksql http://ksqldb-server:8088
+```
+
+
+## 3. Create a Stream
 
 ```sql
 CREATE STREAM riderLocations
